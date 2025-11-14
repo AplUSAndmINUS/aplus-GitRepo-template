@@ -1,12 +1,40 @@
 [user]
     name = Terence Waters
-    email = [Your GitHub email]
+    email = [Your GitHub email here]
+[push]
+    default = simple
+    autoSetupRemote = true
+[diff]
+    tool = vscode
+[difftool "vscode"]
+    cmd = code --wait --diff $LOCAL $REMOTE
+[merge]
+    tool = vscode
+[mergetool "vscode"]
+    cmd = code --wait $MERGED
+[branch]
+    autosetuprebase = always
+    autosetupmerge = always
+[core]
+    editor = code --wait
+    autocrlf = input
+    excludesfile = ~/.gitignore_global
+    pager = less -FRX
 [color]
     diff = auto
     status = auto
     branch = auto
 [apply]
     whitespace = nowarn
+[init]
+    defaultBranch = master
+[pull]
+    rebase = true
+    ff = only
+[fetch]
+    prune = true
+[rerere]
+    enabled = true
 [alias]
     st = status -sb
     lo = log --all --oneline --graph --decorate
@@ -24,3 +52,7 @@
     ls = diff --name-only
     ta = tag -ln
     undo = reset --soft HEAD^
+    sw = switch
+    restore = restore
+    last = log -1 HEAD --stat
+    visual = !gitk
