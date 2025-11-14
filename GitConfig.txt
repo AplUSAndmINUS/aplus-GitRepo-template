@@ -1,0 +1,26 @@
+[user]
+    name = Terence Waters
+    email = [Your GitHub email]
+[color]
+    diff = auto
+    status = auto
+    branch = auto
+[apply]
+    whitespace = nowarn
+[alias]
+    st = status -sb
+    lo = log --all --oneline --graph --decorate
+    co = checkout
+    all = add .
+    c = commit
+    cm = commit -m
+    cam = commit -am
+    amend = commit --amend -C HEAD
+    br = branch
+    bra = branch -a
+    df = diff --staged
+    users = log --pretty=format:'%C(auto) %h %Cgreen %an %Cred %ar %Creset %s'
+    la = diff --name-status
+    ls = diff --name-only
+    ta = tag -ln
+    undo = reset --soft HEAD^
